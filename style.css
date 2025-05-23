@@ -1,0 +1,60 @@
+/* Custom styles for Missing Soldiers Tracker */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Buttons */
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Input and Select Fields */
+input, select {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #2563eb; /* Tailwind blue-600 */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* Table hover row effect */
+table tbody tr:hover {
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+}
+
+/* Profile Image Styling */
+.profile-img {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Section Headings */
+section h2 {
+  font-weight: 600;
+  color: #071a4e; /* Tailwind blue-900 */
+}
+
+/* Card Styling (reusable block) */
+.card {
+  background-color: #36cacc;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
