@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Dashboard -->
+    <section class="p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold">Dashboard</h2>
+        <button class="bg-green-600 text-white px-4 py-2 rounded">
+          + Add New Soldier
+        </button>
+      </div>
+
+      <!-- Filters -->
+      <div class="bg-white p-4 rounded shadow mb-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <select class="p-2 border rounded">
+            <option>Status</option>
+            <option>Active</option>
+            <option>Missing</option>
+            <option>Found</option>
+            <option>Deceased</option>
+          </select>
+          <input type="text" placeholder="Rank" class="p-2 border rounded" />
+          <input type="text" placeholder="Unit" class="p-2 border rounded" />
+          <input type="date" class="p-2 border rounded" />
+        </div>
+        <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+          Search
+        </button>
+      </div>
+
+      <input
+        type="text"
+        placeholder="Search..."
+        class="mb-4 w-full p-2 border rounded"
+      />
+      <table class="w-full border">
+        <thead>
+          <tr class="bg-gray-200 text-left">
+            <th class="p-2">Name</th>
+            <th class="p-2">Rank</th>
+            <th class="p-2">Status</th>
+            <th class="p-2">Last Seen</th>
+            <th class="p-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white">
+            <td class="p-2">John D</td>
+            <td class="p-2">Major</td>
+            <td class="p-2">Missing</td>
+            <td class="p-2">12/01/2024</td>
+            <td class="p-2 text-blue-600 cursor-pointer">View/Edit</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="p-2">Rani K</td>
+            <td class="p-2">Captain</td>
+            <td class="p-2">Active</td>
+            <td class="p-2">15/02/2024</td>
+            <td class="p-2 text-blue-600 cursor-pointer">View/Edit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <div class="mt-4 flex justify-center space-x-2">
+        <button class="px-3 py-1 border rounded">Previous</button>
+        <button class="px-3 py-1 border bg-blue-500 text-white">1</button>
+        <button class="px-3 py-1 border rounded">2</button>
+        <button class="px-3 py-1 border rounded">Next</button>
+      </div>
+    </section>
+
+    <!-- Add/Edit Soldier Page -->
+    <section class="p-6 max-w-xl mx-auto">
+      <h2 class="text-xl font-semibold mb-4">Add/Edit Soldier</h2>
+      <input
+        type="text"
+        placeholder="Name"
+        class="w-full p-2 mb-3 border rounded"
+      />
+      <input
+        type="text"
+        placeholder="Rank"
+        class="w-full p-2 mb-3 border rounded"
+      />
+      <input
+        type="text"
+        placeholder="Unit"
+        class="w-full p-2 mb-3 border rounded"
+      />
+      <select class="w-full p-2 mb-3 border rounded">
+        <option>Status</option>
+        <option>Active</option>
+        <option>Missing</option>
+        <option>Found</option>
+        <option>Deceased</option>
+      </select>
+      <input type="date" class="w-full p-2 mb-3 border rounded" />
+      <input
+        type="text"
+        placeholder="Last Known Location"
+        class="w-full p-2 mb-3 border rounded"
+      />
+      <input type="file" class="w-full p-2 mb-3 border rounded" />
+      <button class="bg-blue-600 text-white px-4 py-2 rounded">Save</button>
+    </section>
+
+    <!-- Soldier Profile Page -->
+    <section class="p-6 max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">👤 Soldier Profile</h2>
+      <div class="bg-white p-6 rounded shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Rank:</strong> Major</p>
+            <p><strong>Unit:</strong> Bravo Company</p>
+            <p><strong>Status:</strong> Missing</p>
+          </div>
+          <div>
+            <p><strong>Date Last Seen:</strong> 12 January 2024</p>
+            <p><strong>Last Known Location:</strong> Eastern Sector</p>
+            <p><strong>Contact Officer:</strong> Lt. Smith</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p><strong>Description:</strong></p>
+          <p class="text-gray-700">
+            John was last seen during a reconnaissance mission in the eastern
+            hills. His team lost contact after a sudden storm and potential
+            ambush. Search operations are ongoing.
+          </p>
+        </div>
+        <div class="mt-4">
+          <img
+            src="https://via.placeholder.com/200"
+            alt="Soldier Photo"
+            class="w-48 h-48 object-cover rounded border"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
